@@ -11,5 +11,7 @@ public class PhotoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_photo);
 
         Client c = new Client();
+
+        c.execute();
     }
 }
