@@ -8,10 +8,14 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Client c = Client.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        c.connect();
 
         final Button button = (Button) findViewById(R.id.buttonPhoto);
         button.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), QuestionsActivity.class);
 
-                i.putExtra("CATEGORY", "electricite");
+                i.putExtra("CATEGORY", "elec");
                 startActivity(i);
             }
         });
