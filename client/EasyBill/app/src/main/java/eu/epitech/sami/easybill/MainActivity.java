@@ -3,21 +3,22 @@ package eu.epitech.sami.easybill;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Client c = Client.getInstance();
+    private Client c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        c = Client.getInstance(this);
+
         c.connect();
-        c.update();
+//        c.update();
 
         final Button button = (Button) findViewById(R.id.buttonPhoto);
         button.setOnClickListener(new View.OnClickListener() {

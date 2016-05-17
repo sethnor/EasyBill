@@ -1,12 +1,11 @@
 package eu.epitech.sami.easybill;
 
+import android.content.Context;
 import android.util.Log;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 
@@ -20,16 +19,17 @@ public class Client {
     private static PrintWriter          outp;
     private static BufferedInputStream  inp;
     private static String               str;
+    private static Context              mContext;
 
-    public synchronized static Client   getInstance()
+    public synchronized static Client   getInstance(Context context)
     {
         if (_instance == null)
-            _instance = new Client();
+            _instance = new Client(context.getApplicationContext());
         return _instance;
     }
 
-    private Client() {
-
+    private Client(Context context) {
+        mContext = context;
     }
 
     public static void                  connect() {
@@ -46,7 +46,7 @@ public class Client {
 
                     Log.d("status", "connected");
 
-                    readString();
+                    str = readString();
 
                     if (str != null)
                         Log.d("status", str);
@@ -74,6 +74,7 @@ public class Client {
                         tmp = inp.read(line);
                     } catch (IOException e) {
                         e.printStackTrace();
+                        Log.d("response", new String(line, 0, tmp));
                     }
                     if (line != null) {
                         Log.d("string", new String (line, 0, tmp));
@@ -88,24 +89,25 @@ public class Client {
 
     public static void     write(String str)
     {
-        outp.write(str);
-        outp.flush();
+        if (str != null) {
+            outp.write(str);
+            outp.flush();
+        }
     }
 
     public static void     update()
     {
-        String             tmp;
-        JSONObject         data;
+        String             tmp = null;
 
         try {
             write("UPDATE_0");
-            Log.d("status","update sent");
+            Log.d("status", "update sent");
 
-            tmp = readString();
-            data = new JSONObject(tmp);
+            OutputStreamWriter writer = new OutputStreamWriter(mContext.openFileOutput("questions.txt", mContext.MODE_PRIVATE));
 
-            Log.d("test", data.getString("question"));
-        } catch (JSONException e) {
+            writer.write(tmp);
+            writer.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
