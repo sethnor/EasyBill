@@ -1,12 +1,202 @@
 [
 	[
-		"Quel age avez vous ?",
-		"15 ans",
-		["test"]
+		"Quel sont les tarifs et diverses contributions ?",
+		"Réponse a fournir",
+		["elec", "termes"]
 	],
 	[
-		"Quelle est votre couleur preferer ?",
-		"emeaude",
-		["test", "test2"]
-	]
+		"Qu'est-ce que le tarif bleu ?",
+		"Il s'agit d'un tarif réglementé fixé par les pouvoirs publics et sans engagement de durée.",
+		["elec", "termes"]
+	],
+	[
+		"Quelles sont les options tarifaires du contrat d'électricité ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Quelles sont les différence entre \"heure creuse\" et \"heure pleine\" ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que le solde antérieur ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que la facture de régularisation ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que le net à payer ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que le solde en faveur ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Quelles sont les différence entre facture estimée ou réelle ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que la facturation heure de pointe en période non EJP (rattrapage tarifaire) ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que l'historique de consommation ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que la facture de souscription ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Quelles sont mes heures creuses ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce qu'une donnée relevée en avance pour facture réelle ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que le rattrapage tarifaire ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Quelles sont les autres taxes et contributions ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Combien me coûte l'abonnement par mois ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que l'auto-relève ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que la référence contrat ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Quel est le prix de l'abonnement ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Quels sont les frais de la première mise en service ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Comment sont calculées les parts fixes de l'acheminement ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"D'où vient l'assiette de la CTA sur ma facture ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Comment est calculée l'assiette CTA ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que le montant H.T. facturé des autres options et services souscrits ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qui décide des taxes ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que sont toutes ces taxes ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Qu'est-ce que la part d'acheminement ?",
+		"Réponse a fournir",
+		["elec", "termes"]
+	],
+	[
+		"Où trouver le numéro de contrat sur la facture ?",
+		"Réponse a fournir",
+		["elec", "où trouver info"]
+	],
+	[
+		"Où trouver la référence du contrat d'énérgie ?",
+		"Réponse a fournir",
+		["elec", "où trouver info"]
+	],
+	[
+		"Où trouver le point de livraison / PDL ?",
+		"Réponse a fournir",
+		["elec", "où trouver info"]
+	],
+	[
+		"Où trouver les heures pleines et heures creuses de mon contrat ?",
+		"Si vous disposez d'un compteur Heures Pleines / Heures Creuses, vous retrouverez les horaires de chaque plage directement sur votre facture d'électricité. Les plages sont fixées par le Gestionnaire de Réseau de Distribution et ne peuvent pas être modifiées.",
+		["elec", "où trouver info"]
+	],
+	[
+		"Où trouver la visibilté de réduction TPN ?",
+		"Réponse a fournir",
+		["elec", "où trouver info"]
+	],
+	[
+		"Où trouver le numéro de compteur ?",
+		"Réponse a fournir",
+		["elec", "où trouver info"]
+	],
+	[
+		"Où trouver la référence pour payer ?",
+		"Réponse a fournir",
+		["elec", "où trouver info"]
+	],
+	[
+		"Où adresser son chèque ?",
+		"Réponse a fournir",
+		["elec", "où trouver info"]
+	],
+	[
+		"J'ai conclu un contrat en octobre mais j'ai reçu une facture concernant ma consommation du mois en cours plus les mois à venir jusqu'en janvier (par anticipation). Est-ce normal ?",
+		"Réponse a fournir",
+		["elec", "vie du contrat", "consos"]
+	],
+	[
+		"Je voulais savoir pourquoi j'ai 2 prélèvements prévus un le 2 et l'autre le 7 d'un montant différent ?",
+		"Réponse a fournir",
+		["elec", "vie du contrat", "paiement"]
+	],
+	[
+		"Je voudrais juste savoir quel est le nouveau montant de prélèvement mensuel ?",
+		"Réponse a fournir",
+		["elec", "vie du contrat", "paiement"]
+	],
+	[
+		"Je suis étudiant et je paye mon contrat par prévlèvement bancaire, je viens de consulter mon compte et il y a 2 prévlèvement du mois du septembre le 1er de 42,04 euros le 8/9 et le 2eme de 39 euros le 30/09 ? Pourquoi ?",
+		"Réponse a fournir",
+		["elec", "vie du contrat", "paiement"]
+	],
 ]
