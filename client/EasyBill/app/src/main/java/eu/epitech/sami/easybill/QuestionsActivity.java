@@ -2,7 +2,10 @@ package eu.epitech.sami.easybill;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class QuestionsActivity extends AppCompatActivity {
 
@@ -15,17 +18,11 @@ public class QuestionsActivity extends AppCompatActivity {
 
         if (extras != null)
         {
-            Client c = Client.getInstance();
-
             extras.getString("CATEGORY");
 
-            c.write("UPDATE_0");
+            ArrayList<String>       list;
+            ArrayAdapter<String>    adapter;
 
-            Log.d("status", "update sent");
-
-            Log.d("answer", Client.readString());
         }
-
-
     }
 }

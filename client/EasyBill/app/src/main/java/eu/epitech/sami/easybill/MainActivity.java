@@ -3,6 +3,7 @@ package eu.epitech.sami.easybill;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         c.connect();
+        c.update();
 
         final Button button = (Button) findViewById(R.id.buttonPhoto);
         button.setOnClickListener(new View.OnClickListener() {

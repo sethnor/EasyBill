@@ -2,6 +2,9 @@ package eu.epitech.sami.easybill;
 
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -45,7 +48,10 @@ public class Client {
 
                     readString();
 
-                    Log.d("status", "confirmed");
+                    if (str != null)
+                        Log.d("status", str);
+                    else
+                        Log.d("status", "fail");
                 }
                 catch (IOException e) {
                     Log.d("test", "no");
@@ -70,6 +76,7 @@ public class Client {
                         e.printStackTrace();
                     }
                     if (line != null) {
+                        Log.d("string", new String (line, 0, tmp));
                         flag = false;
                     }
                 }
@@ -83,6 +90,24 @@ public class Client {
     {
         outp.write(str);
         outp.flush();
+    }
+
+    public static void     update()
+    {
+        String             tmp;
+        JSONObject         data;
+
+        try {
+            write("UPDATE_0");
+            Log.d("status","update sent");
+
+            tmp = readString();
+            data = new JSONObject(tmp);
+
+            Log.d("test", data.getString("question"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     protected void  closeClient() {
