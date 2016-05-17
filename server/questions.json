@@ -200,7 +200,7 @@
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"J'avais eu dans ma boite aux lettre un avis d'impayé (car je n'avais pas encore mon nom sur ma boite aux lettre du coup je n'ai pas eu la facture). Avec, j'ai aussi eu une facture de 76euros j'ai donc envoyé le petit coupon avec mon rib, mais je n'ai toujours pas été débitée, est-ce normal ?"
+		"J'avais eu dans ma boite aux lettre un avis d'impayé (car je n'avais pas encore mon nom sur ma boite aux lettre du coup je n'ai pas eu la facture). Avec, j'ai aussi eu une facture de 76euros j'ai donc envoyé le petit coupon avec mon rib, mais je n'ai toujours pas été débitée, est-ce normal ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
@@ -210,98 +210,98 @@
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Comment modifier mon échéancier de mensualisation ?"
+		"Comment modifier mon échéancier de mensualisation ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi on viens de me retirer 167 euros sur mon compte alors que mes mensualités sont de 87euros ?"
+		"Pourquoi on viens de me retirer 167 euros sur mon compte alors que mes mensualités sont de 87euros ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi ma facture est plus élevée malgré une diminution de consommation ?"
+		"Pourquoi ma facture est plus élevée malgré une diminution de consommation ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "montant", "consos"]
 	],
 	[
-		"J'aimerai savoir pourquoi habituellemenent j'ai des factures de max 60euro et ma derniere facture est de 135 euro ?"
+		"J'aimerai savoir pourquoi habituellemenent j'ai des factures de max 60euro et ma derniere facture est de 135 euro ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "montant"]
 	],
 	[
-		" J'ai reçu mon contrat ainsi que ma 1ere facture et j'aimerai savoir les modalités pour mettre en place la mensualisation et comment vous renvoyer mon dossier ?"
+		" J'ai reçu mon contrat ainsi que ma 1ere facture et j'aimerai savoir les modalités pour mettre en place la mensualisation et comment vous renvoyer mon dossier ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "contrat"]
 	],
 	[
-		"Pourquoi ai-je des factures dont les montants varient du simple au double/triple/quadruple ?"
+		"Pourquoi ai-je des factures dont les montants varient du simple au double/triple/quadruple ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "montant"]
 	],
 	[
-		"Je paie un prix fixe mensuel pour l'électricité. Pourrai je le changer ?"
+		"Je paie un prix fixe mensuel pour l'électricité. Pourrai je le changer ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"J'ai recu une facture datant de 2012/2013, il parait que c'est un rattrapage rétroactif cela me semble bizarre ?"
+		"J'ai recu une facture datant de 2012/2013, il parait que c'est un rattrapage rétroactif cela me semble bizarre ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"J'ai bien reçu ma facture de décompte annuel, mais pas le prochain échéancier de prélèvement ?"
+		"J'ai bien reçu ma facture de décompte annuel, mais pas le prochain échéancier de prélèvement ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"ES me demande paiement d'une facture deux ans après ma dernière livraison d'électricité et mon déménagement, et alors que l'intégralité des factures ont été payées, au motif que les tarifs ont été révisés postérieurement à la hausse. Est-ce possible ?"
+		"ES me demande paiement d'une facture deux ans après ma dernière livraison d'électricité et mon déménagement, et alors que l'intégralité des factures ont été payées, au motif que les tarifs ont été révisés postérieurement à la hausse. Est-ce possible ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Ne voit pas qu’il faut rajouter la mensualité au dépassement ?"
+		"Ne voit pas qu’il faut rajouter la mensualité au dépassement ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi m'a t-on prélevé d’un montant supérieur à celui inscrit sur la facture de régularisation ?"
+		"Pourquoi m'a t-on prélevé d’un montant supérieur à celui inscrit sur la facture de régularisation ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Je ne comprend pas le prélèvement du dépassement ?"
+		"Je ne comprend pas le prélèvement du dépassement ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi n’avez vous pas édité à côté de la facture le nouvel échéancier ?"
+		"Pourquoi n’avez vous pas édité à côté de la facture le nouvel échéancier ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi ai-je 13€ de frais de rejet ? Pourquoi mon prélevement a-t-il été arreté ?"
+		"Pourquoi ai-je 13€ de frais de rejet ? Pourquoi mon prélevement a-t-il été arreté ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi malgré le nouveau RIB enregistré, je suis encore prélevé sur l'ancien ?"
+		"Pourquoi malgré le nouveau RIB enregistré, je suis encore prélevé sur l'ancien ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi des frais de mise en service alors que j’ai déjà du courant chez moi ?"
+		"Pourquoi des frais de mise en service alors que j’ai déjà du courant chez moi ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Pourquoi la consommation est répartie sur plusieurs lignes ? C’est lorsqu’il y a un changement de tarif ?"
+		"Pourquoi la consommation est répartie sur plusieurs lignes ? C’est lorsqu’il y a un changement de tarif ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
 	],
 	[
-		"Est ce que ce sera remboursé / prélevé (alors qu’il est noté \"régularisation sur votre compte à partir du\") ?"
+		"Est ce que ce sera remboursé / prélevé (alors qu’il est noté \"régularisation sur votre compte à partir du\") ?",
 		"Réponse a fournir",
 		["elec", "vie du contrat", "paiement"]
-	],
+	]
 ]
