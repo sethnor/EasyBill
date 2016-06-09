@@ -4,7 +4,9 @@ import android.content.Context;
 import android.util.Log;
 
 import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -118,6 +120,29 @@ public class Client {
             s.close();
         }
         catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void      sendPic(String path) {
+
+        try {
+            OutputStream outputStream = s.getOutputStream();
+            FileInputStream in = null;
+
+            in = new FileInputStream(path);
+            // Write to the stream:
+            byte[] buffer = new byte[1024]; // 1KB buffer size
+            int length = 0;
+            while ( (length = in.read(buffer, 0, buffer.length)) != -1 ){
+                outputStream.write(buffer, 0, length);
+            }
+            outputStream.flush();
+
+            if (in != null) in.close();
+            s.close(); // Will close the outputStream, too.
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

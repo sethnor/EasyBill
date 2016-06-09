@@ -1,6 +1,7 @@
 package eu.epitech.sami.easybill;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Environment;
@@ -8,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,7 +21,7 @@ public class PhotoActivity extends Activity {
 
     private Camera              camera;
     private CameraView          cameraView;
-    private Button imageButton;
+    private Button              imageButton;
 
     protected void              onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,9 +63,20 @@ public class PhotoActivity extends Activity {
                 return;
             }
             try {
+                Log.d("status", "sending photo");
                 FileOutputStream fos = new FileOutputStream(pictureFile);
                 fos.write(data);
                 fos.close();
+
+                Log.d("status path", pictureFile.getAbsolutePath());
+
+                /* -------- send image here with client --------- */
+
+                Intent  i = new Intent(PhotoActivity.this, PreviewActivity.class);
+
+                i.putExtra("path", pictureFile.getAbsolutePath());
+                startActivity(i);
+
             } catch (FileNotFoundException e) {
 
             } catch (IOException e) {

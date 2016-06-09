@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         c = Client.getInstance(this);
 
-//        c.connect();
+        c.connect();
 //        c.update();
 
         final Button button = (Button) findViewById(R.id.buttonPhoto);
