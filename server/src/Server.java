@@ -27,7 +27,7 @@ public class Server {
     }
 
     private JSONArray getQuestionFile() {
-        Charset charset = Charset.forName("US-ASCII");
+        Charset charset = Charset.forName("UTF-8");
         String jsonCode = "";
         try (BufferedReader reader = Files.newBufferedReader(FileSystems.getDefault().getPath("", "questions.json"), charset)) {
             String line;
@@ -36,6 +36,7 @@ public class Server {
             }
         } catch (IOException e) {
             e.printStackTrace();
+            jsonCode = "[]";
         }
         JSONArray obj = new JSONArray(jsonCode);
         long date = new File("questions.json").lastModified();

@@ -44,7 +44,7 @@ public class ClientConnexion implements Runnable{
             writer = new PrintWriter(connexion.getOutputStream(), true);
             reader = new BufferedInputStream(connexion.getInputStream());
 
-
+/*
             String cmd = "UPDATE_" + obj.get(obj.length() - 1).toString();
             writer.write(cmd);
             writer.flush();
@@ -63,9 +63,37 @@ public class ClientConnexion implements Runnable{
                 f.flush();
                 f.close();
             }
+            */
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+            OutputStream outputStream = connexion.getOutputStream();
+            FileInputStream in = null;
+
+            in = new FileInputStream("facture.jpg");
+            // Write to the stream:
+           /* try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }*/
+            byte[] buffer = new byte[1024000]; // 1KB buffer size
+            int length = 0;
+            while ( (length = in.read(buffer, 0, buffer.length)) != -1 ){
+                outputStream.write(buffer, 0, length);
+                System.out.println(length);
+            }
+            outputStream.flush();
+
+            System.out.println(read());
+            if (in != null) in.close();
+            //connexion.close(); // Will close the outputStream, too.
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        /*
         try {
             writer = new PrintWriter(connexion.getOutputStream(), true);
             reader = new BufferedInputStream(connexion.getInputStream());
@@ -80,7 +108,7 @@ public class ClientConnexion implements Runnable{
             System.out.println("\t * " + name + " : Réponse reçue " + response);
         } catch (IOException e1) {
             e1.printStackTrace();
-        }
+        }*/
         writer.write("CLOSE");
         writer.flush();
         writer.close();

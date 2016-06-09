@@ -123,10 +123,11 @@ public class Processor {
         return (new LinkedList<>());
     }
 
-    public void run(String str) {
+    public List<List<Point>> run(String str) {
         file = str;
         init();
         List<List<Point>> list = new LinkedList<>();
+        List<List<Point>> res = new LinkedList<>();
 
         for (int i = 1; i <= 13; i++) {
             list.add(processOne(i));
@@ -146,21 +147,26 @@ public class Processor {
         boolean firstPage = recto > verso;
         if ((firstPage && recto < 3) || (!firstPage && verso < 3)) {
             System.out.println("Aucune page.......");
-            return;
+            return res;
         }
 
         System.out.println((firstPage ? "Première" : "Deuxième") + " page !");
+
 
         Mat img = Imgcodecs.imread(file, Imgcodecs.CV_LOAD_IMAGE_COLOR);
         for (int i = 0; i < list.size(); i++) {
             List<Point> bloc = list.get(i);
             if (bloc.size() > 0 && ((firstPage && i < 9) || (!firstPage && i >= 9))) {
+                res.add(bloc);
+                /*
                 Imgproc.line(img, bloc.get(0), bloc.get(1), new Scalar(0, 255, 0), 4);
                 Imgproc.line(img, bloc.get(1), bloc.get(2), new Scalar(0, 255, 0), 4);
                 Imgproc.line(img, bloc.get(2), bloc.get(3), new Scalar(0, 255, 0), 4);
                 Imgproc.line(img, bloc.get(3), bloc.get(0), new Scalar(0, 255, 0), 4);
+                */
             }
         }
-        Imgcodecs.imwrite("img.jpg", img);
+        //Imgcodecs.imwrite("img.jpg", img);
+        return res;
     }
 }
