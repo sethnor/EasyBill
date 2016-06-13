@@ -39,7 +39,7 @@ public class Client {
         new Thread (new Runnable() {
             public void run() {
                 try {
-                    s = new Socket("10.14.59.120", 2345);
+                    s = new Socket("10.14.59.180", 2345);
 
                     Log.d("status", "wait");
 
@@ -48,7 +48,7 @@ public class Client {
 
                     Log.d("status", "connected");
 
-                    str = readString();
+                    readString();
 
                     if (str != null)
                         Log.d("status", str);
@@ -63,7 +63,7 @@ public class Client {
         }).start();
     }
 
-    public static String   readString()
+    public static void   readString()
     {
         new Thread (new Runnable() {
             public void run() {
@@ -86,7 +86,6 @@ public class Client {
                 str = new String(line, 0, tmp);
             }
         }).start();
-        return str;
     }
 
     public static void     write(String str)
@@ -99,19 +98,22 @@ public class Client {
 
     public static void     update()
     {
-        String             tmp = null;
-
         try {
             write("UPDATE_0");
             Log.d("status", "update sent");
 
             OutputStreamWriter writer = new OutputStreamWriter(mContext.openFileOutput("questions.txt", mContext.MODE_PRIVATE));
 
-            writer.write(tmp);
+            writer.write(str);
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static String    getString()
+    {
+        return str;
     }
 
     protected void  closeClient() {
@@ -128,11 +130,11 @@ public class Client {
 
         try {
             OutputStream outputStream = s.getOutputStream();
-            FileInputStream in = null;
+            FileInputStream in;
 
             in = new FileInputStream(path);
             // Write to the stream:
-            byte[] buffer = new byte[1024]; // 1KB buffer size
+            byte[] buffer = new byte[1000024]; // 1KB buffer size
             int length = 0;
             while ( (length = in.read(buffer, 0, buffer.length)) != -1 ){
                 outputStream.write(buffer, 0, length);
@@ -140,7 +142,7 @@ public class Client {
             outputStream.flush();
 
             if (in != null) in.close();
-            s.close(); // Will close the outputStream, too.
+//            s.close(); // Will close the outputStream, too.
 
         } catch (IOException e) {
             e.printStackTrace();

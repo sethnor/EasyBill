@@ -35,7 +35,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void                 surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
-        if(holder.getSurface() == null)
+        if (holder.getSurface() == null)
             return;
 
         try{
