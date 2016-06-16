@@ -58,9 +58,9 @@ public class ClientProcessor implements Runnable {
                     f.close();
                     Processor p = new Processor();
                     List<List<Point>> list = p.run("tmp.jpg");
-                    writer.write(list.toString());
+                    writer.write("img:" + list.toString());
                     writer.flush();
-//                    System.out.println(list.toString());
+                    System.out.println("img:" + list.toString());
                 } else {
                     String toSend;
 
