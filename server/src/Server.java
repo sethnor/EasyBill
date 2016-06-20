@@ -47,6 +47,10 @@ public class Server {
     public void start(){
         JSONArray obj = getQuestionFile();
         //System.out.println(obj);
+        if (server == null) {
+            System.out.println("Cannot start server, maybe ip is not valid");
+            return;
+        }
         System.out.println("Server running on " + host + ":" + port);
         Thread t = new Thread(new Runnable(){
             public void run(){

@@ -3,7 +3,6 @@ import org.opencv.core.Point;
 
 import java.io.*;
 import java.net.Socket;
-import java.net.SocketException;
 import java.util.List;
 
 public class ClientProcessor implements Runnable {
@@ -24,9 +23,36 @@ public class ClientProcessor implements Runnable {
         return (obj.toString());
     }
 
-    private String process(String response) {
-        System.out.println(response);
-        return "PAR ENCORE FAIT";
+    private String readResponse() {
+        try {
+            String response = "";
+            byte[] b = new byte[4096];
+            int stream = reader.read(b);
+            if (stream > 0) {
+                response = new String(b, 0, stream);
+            }
+            if (reader.available() > 1) {
+                FileOutputStream f = new FileOutputStream("tmp.jpg");
+                f.write(b);
+                while (reader.available() > 1) {
+                    b = new byte[4096];
+                    reader.read(b);
+                    f.write(b);
+                }
+                f.flush();
+                f.close();
+                Processor p = new Processor();
+                List<List<Point>> list = p.run("tmp.jpg");
+                writer.write("img:" + list.toString());
+                writer.flush();
+                System.out.println("img:" + list.toString());
+                return ("IMG");
+            }
+            return (response);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ("KO");
     }
 
     public void run() {
@@ -38,63 +64,37 @@ public class ClientProcessor implements Runnable {
             e.printStackTrace();
         }
         while (!sock.isClosed()) {
-            try {
 
-                String response = new String();
-                byte[] b = new byte[4096];
-                int stream = reader.read(b);
-                if (stream > 0) {
-                    response = new String(b, 0, stream);
-                }
-                if (reader.available() > 1) {
-                    FileOutputStream f = new FileOutputStream("tmp.jpg");
-                    f.write(b);
-                    while (reader.available() > 1) {
-                        b = new byte[4096];
-                        reader.read(b);
-                        f.write(b);
-                    }
-                    f.flush();
-                    f.close();
-                    Processor p = new Processor();
-                    List<List<Point>> list = p.run("tmp.jpg");
-                    writer.write("img:" + list.toString());
-                    writer.flush();
-                    System.out.println("img:" + list.toString());
-                } else {
-                    String toSend;
-
-                    switch (response.split("_")[0]) {
-                        case "UPDATE":
-                            toSend = updateCache(response);
-                            break;
-                        case "PROCESS":
-                            toSend = process(response);
-                            break;
-                        case "CLOSE":
-                            toSend = "";
-                            closeConnexion = true;
-                            break;
-                        default:
-                            toSend = "UNKNOWN";
-                            break;
-                    }
-
-                    if (closeConnexion) {
-                        writer = null;
-                        reader = null;
-                        sock.close();
-                        break;
-                    }
-                    writer.write(toSend);
-                    writer.flush();
-                }
-            } catch (SocketException e) {
-                //e.printStackTrace();
-                System.err.println("Problem with connexion");
+            String response = readResponse();
+            if (response.equals("KO"))
                 break;
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (!response.equals("IMG")) {
+                String toSend;
+                switch (response.split("_")[0]) {
+                    case "UPDATE":
+                        toSend = updateCache(response);
+                        break;
+                    case "CLOSE":
+                        toSend = "";
+                        closeConnexion = true;
+                        break;
+                    default:
+                        toSend = "UNKNOWN";
+                        break;
+                }
+
+                if (closeConnexion) {
+                    writer = null;
+                    reader = null;
+                    try {
+                        sock.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                }
+                writer.write(toSend);
+                writer.flush();
             }
         }
     }
