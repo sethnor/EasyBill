@@ -26,24 +26,30 @@ public class ClientProcessor implements Runnable {
     private String readResponse() {
         try {
             String response = "";
-            byte[] b = new byte[4096];
+            byte[] b = new byte[8192];
             int stream = reader.read(b);
-            if (stream > 0) {
-                response = new String(b, 0, stream);
+            if (stream == -1) {
+                return ("KO");
             }
-            if (reader.available() > 1) {
+            response = new String(b, 0, stream);
+            if (reader.available() > 0) {
                 FileOutputStream f = new FileOutputStream("tmp.jpg");
                 f.write(b);
-                while (reader.available() > 1) {
-                    b = new byte[4096];
-                    reader.read(b);
+                while (reader.available() > 0) {
+                    b = new byte[8192];
+                    stream += reader.read(b);
                     f.write(b);
+                    try {
+                        Thread.sleep(20);
+                    } catch (InterruptedException e) {
+
+                    }
                 }
                 f.flush();
                 f.close();
                 Processor p = new Processor();
-                List<List<Point>> list = p.run("tmp.jpg");
-                writer.write("img:" + list.toString());
+                List<List<List<Double>>> list = p.run("tmp.jpg");
+                writer.write(list.toString());
                 writer.flush();
                 System.out.println("img:" + list.toString());
                 return ("IMG");

@@ -115,7 +115,7 @@ public class Processor {
             }
         }
         System.out.println(goodMatchesList.size());
-        if (goodMatchesList.size() > 20) {
+        if (goodMatchesList.size() > 15) {
             System.out.println("Bloc trouvé !");
             return (getBorder(bloc, blocKeyPoints, goodMatchesList));
         }
@@ -123,11 +123,11 @@ public class Processor {
         return (new LinkedList<>());
     }
 
-    public List<List<Point>> run(String str) {
+    public List<List<List<Double>>> run(String str) {
         file = str;
         init();
         List<List<Point>> list = new LinkedList<>();
-        List<List<Point>> res = new LinkedList<>();
+        List<List<List<Double>>> res = new LinkedList<>();
 
         for (int i = 1; i <= 13; i++) {
             list.add(processOne(i));
@@ -157,7 +157,19 @@ public class Processor {
         for (int i = 0; i < list.size(); i++) {
             List<Point> bloc = list.get(i);
             if (bloc.size() > 0 && ((firstPage && i < 9) || (!firstPage && i >= 9))) {
-                res.add(bloc);
+                List<List<Double>> toAdd = new LinkedList<>();
+                List<Double> pt = new LinkedList<>();
+                pt.add(bloc.get(0).x);
+                pt.add(bloc.get(0).y);
+                toAdd.add(pt);
+                pt = new LinkedList<>();
+                pt.add(bloc.get(2).x);
+                pt.add(bloc.get(2).y);
+                toAdd.add(pt);
+                pt = new LinkedList<>();
+                pt.add((double) i);
+                toAdd.add(pt);
+                res.add(toAdd);
                 /*
                 Imgproc.line(img, bloc.get(0), bloc.get(1), new Scalar(0, 255, 0), 4);
                 Imgproc.line(img, bloc.get(1), bloc.get(2), new Scalar(0, 255, 0), 4);

@@ -40,7 +40,7 @@ public class Server {
         }
         JSONArray obj = new JSONArray(jsonCode);
         long date = new File("questions.json").lastModified();
-        obj.put(date);
+        //obj.put(date);
         return obj;
     }
 

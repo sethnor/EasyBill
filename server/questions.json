@@ -1,307 +1,202 @@
 [
 	[
-		"Quel sont les tarifs et diverses contributions ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"",
+		"Il s'agit de votre facture pour la fourniture d'électricité.",
+		"",
+		""
 	],
 	[
-		"Qu'est-ce que le tarif bleu ?",
-		"Il s'agit d'un tarif réglementé fixé par les pouvoirs publics et sans engagement de durée.",
-		["elec", "termes"]
+		"Type de facture",
+		"Vous recevez la facture de régularisation de mensualisation lorsque vous êtes mensualisé. Cette facture récapitule l'ensemble de vos consommations réelles.",
+		"",
+		""
 	],
 	[
-		"Quelles sont les options tarifaires du contrat d'électricité ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"Coordonnées du service client et références client",
+		"Pour contacter notre service client, choisissez parmi les modes de contact présentés. Les références (A) à rappeler pour toute opération ou contact avec notre service client sont indiquées.",
+		"Savez-vous que vous pouvez effectuer certaines démarches en ligne en toute autonomie 24h / 24 et 7j / 7 ? Souscrire un nouveau contrat, imprimer un justificatif de domicile, souscrire un nouveau service, consulter/imprimer/télécharger vos factures, modifier vos coordonnées bancaires ou votre date de prélèvement... Pour vous connecter à l'Espass personnel ou créer un compte (https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem) Il suffit de vous munir de votre dernière facture et de compléter les données vous concernant. Vous souhaitez en savoir plus sur l'Espass personnel ? Cliquez ici : http://particuliers.es-energies.fr/electricite/services-en-ligne/espass-personnel",
+		"(A) Votre référence pour tout contact : c'est la référence que vous devez nous indiquer lorsque vous contactez notre service client. Cela permet de trouver facilement votre dossier client. Votre référence pour tout paiement : étant mensualisé, cette référence ne vous sera pas demandée.",
+		"À quelles heures peut-on vous joindre par téléphone ?",
+		"Notre service client est ouvert du lundi au vendredi de 8h30 à 12h et de 13h30 à 17h.",
+		"Où trouver mes références sur la facture ?",
+		"Vous trouverez les références sur votre dernière facture.",
+		"Qu'est-ce que la référence pour tout contact, à quoi sert-elle et où la trouver sur ma facture ?",
+		"C'est la référence que vous devez nous indiquer lorsque vous contactez notre service client. Cela permet de trouver facilement votre dossier client. Vous la trouverez ici"
 	],
 	[
-		"Quelles sont les différence entre \"heure creuse\" et \"heure pleine\" ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"Urgence : coordonnées du Gestionnaire de Réseau",
+		"Vous avez une panne d’électricité ? S’il n’y a plus d’éclairage public et que votre voisinage est également privé d’électricité, il s’agit sans doute d’une panne réseau. Contactez alors le Numéro Dépannage Réseau au 03 88 18 74 00 (Prix d’un appel local).",
+		"Êtes-vous couvert pour une panne électrique ou une fuite d'eau ? Choisissez la tranquillité à un petit prix en souscrivant au service Dépannage électricité et plomberie. Pour en savoir plus, http://particuliers.es-energies.fr/assistance-depannage/services-depannage/depannage-electricite-et-plomberie. Pour souscrire, contactez-nous au 03 88 20 60 60",
+		"",
+		"Qu'est-ce que le Gestionnaire de Réseau ou GRD ?",
+		"Le Gestionnaire du Réseau de Distribution, appelé aussi GRD, s'occupe de la distribution de l'électricité et garantit la maintenance et l'accès au réseau de manière non discriminatoire à l'ensemble des utilisateurs, consommateurs, producteurs et fournisseurs.",
+		"Quelle est la différence entre le Gestionnaire de Réseau et le fournisseur ?",
+		"ÉS Énergies Strasbourg est un fournisseur d'électricité, c'est-à-dire que nous achetons de l'énergie que nous revendons ensuite à nos clients. Le Gestionnaire du Réseau de Distribution, GRD, s'occupe de la distribution de l'électricité et de la maintenance du réseau."
 	],
 	[
-		"Qu'est-ce que le solde antérieur ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"Caractéristiques principales du contrat",
+		"Vous retrouvez ici les principales caractéristiques liées au contrat, que vous pouvez trouver sur votre facture :
+		- La référence de votre contrat (A)
+		- Le nom du titulaire du contrat (B) 
+		- Le nom du co-titulaire (C) le cas échéant
+		- L'Espace de livraison (D)
+		- La Réf. Technique (RTPL) (E)
+		- Le nom de l’offre souscrite : Tarif réglementé (F) ou offre de marché (G) ou Tarif de Première Nécessité (H)
+		- L'option tarifaire (I)
+		- Les Plage(s) horaire(s) de votre option tarifaire (J)
+		- La puissance souscrite (K)
+		- Les services optionnels auxquels vous avez souscrits le cas échéant (L)",
+		"Vous souhaitez obtenir un justificatif et/ou un duplicata de facture ? Connectez-vous à votre Espass personnel pour obtenir et éditer ces documents directement et gratuitement https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem. Créez un compte pour effectuer certaines démarches en ligne en toute autonomie 24h / 24 et 7j / 7, https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem. Êtes-vous couvert pour une panne électrique ou une fuite d'eau ? Choisissez la tranquillité à un petit prix en souscrivant au service Dépannage électricité et plomberie. Pour en savoir plus, http://particuliers.es-energies.fr/assistance-depannage/services-depannage/depannage-electricite-et-plomberie. Pour souscrire, contactez-nous au 03 88 20 60 60",
+		"(A) Votre contrat n° : c'est le numéro associé à votre contrat pour la fourniture d'électricité.
+(B) Le titulaire est le nom de la personne à qui le contrat est rattaché.
+(C) Le co-titulaire est le nom de la personne déclarée sur le contrat en plus du titulaire.
+(D) L'espace de livraison désigne l'adresse du lieu où se trouve votre compteur d'électricité. Il s'agit de votre adresse de consommation.
+(E) RTPL : il s'agit de la référence technique de votre compteur électrique.
+(F) Le Tarif bleu est un tarif réglementé fixé par les pouvoirs publics, sans engagement de durée.
+(G) Pass Élec et Pass 100% vert sont des offres à prix de marché sans engagement de durée, indexées sur l'évolution du tarif réglementé. L'électricité est d'origine renouvelable respectivement à hauteur de 25% et de 100%.
+(H) Le Tarif de Première Nécessité (TPN) est un tarif spécial dont il est possible de bénéficier selon les ressources annuelles du foyer.
+(I) Il existe plusieurs options tarifaires (base, heures pleines/heures creuses, etc.) qui dépendent chacune de l'offre souscrite.
+(J) Plage horaire : si vous avez souscrit à une option tarifaire autre que Base, les plages horaires indiquées correspondent à la période pendant laquelle il est plus avantageux pour vous de consommer. Les plages sont fixées par le Gestionnaire de Réseau de Distribution et ne peuvent pas être modifiées.
+(K) Puissance souscrite : il s'agit de la puissance mise en place au niveau de votre installation. Cette puissance est défini en fonction des informations que vous nous avez fourni lors de votre souscription.
+(L) Si vous avez souscrit à des services optionnels, ils sont affichés ici, qu'ils soient gratuits ou payants.",
+		"Quelle offre au tarif réglementé proposez-vous ?",
+		"Le tarif bleu est l'offre proposée en Tarif réglementé pour les particuliers. Pour connaître nos tarifs, consultez notre fiche descriptive en cliquant sur le lien.http://particuliers.es-energies.fr/documentation",
+		"Quelles offres de marché proposez-vous ?",
+		"Pour connaître nos offres de marché, consultez nos fiches descriptives en cliquant sur le lien.http://particuliers.es-energies.fr/documentation",
+		"Où puis-je trouver ma référence contrat sur la facture ?",
+		"Vous trouvez cette référence ici",
+		"Qu'est-ce que l'espace de livraison (EDL) ou point de livraison (PDL) ou RTPL et où trouver ces références sur la facture ?",
+		"L'espace de livraison, appelé aussi point de livraison ou RTPL définissent l'adresse où se trouve le compteur. Il s'agit de la référence de l'adresse de consommation d'électricité. Vous trouverez cette référence ici + image",
+		"Comment puis-je changer le nom du titulaire du contrat ?",
+		"Pour cela, remplissez le formulaire http://particuliers.es-energies.fr/electricite/votre-contrat/changement-de-nom",
+		"Je souhaite changer d'offre. Comment faire ?",
+		"Pour cela, contactez nous au 03 88 20 60 60 ou par courriel à particuliers@es.fr",
+		"Q'est-ce que les heures pleines et heures creuses et où trouver les créneaux horaires sur ma facture ?",
+		"Les heures creuses correspondent à la plage horaire pendant laquelle le prix de l'énergie est moins élevé que pendant les heures pleines. La plage horaire est indiquée sur votre facture + image. Ces plages sont fixées par le Gestionnaire de Réseau de Distribution et ne peuvent pas être modifiées.",
+		"Je dois remplir un document pour l’accès à la tarification sociale. Où puis-je trouver la référence du point de livraison ?",
+		"L'espace de livraison, appelé aussi point de livraison ou RTPL définissent l'adresse où se trouve le compteur. Il s'agit de la référence de l'adresse de consommation d'électricité. Vous trouverez cette référence ici + image"
 	],
 	[
-		"Qu'est-ce que la facture de régularisation ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"Adresse d'envoi de la facture",
+		"Il s'agit de l'adresse où est envoyée la facture. Elle peut être différente de votre adresse de consommation.",
+		"Vous souhaitez obtenir un justificatif ? Connectez-vous à votre Espass personnel pour obtenir et éditer ce document directement et gratuitement => rubrique Justificatif. https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem. Créez un compte pour effectuer certaines démarches en ligne en toute autonomie 24h / 24 et 7j / 7, https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem. Êtes-vous couvert pour une panne électrique ou une fuite d'eau ? Choisissez la tranquillité à un petit prix en souscrivant au service Dépannage électricité et plomberie. Pour en savoir plus, http://particuliers.es-energies.fr/assistance-depannage/services-depannage/depannage-electricite-et-plomberie. Pour souscrire, contactez-nous au 03 88 20 60 60",
+		"",
+		"Pouvez-vous envoyer la facture à une autre adresse ou changer le nom du payeur ?",
+		"Bien sûr. Pour cela, contactez nous au 03 88 20 60 60 ou par courriel à particuliers@es.fr",
+		"Je déménage, quelles sont les démarches ?",
+		"Pour cela, contactez nous soit au 03 88 20 60 60 ou par courriel à particuliers@es.fr ou connectez-vous à votre Espass personnel (https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem)"
 	],
 	[
-		"Qu'est-ce que le net à payer ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"Synthèse de la facture",
+		"Vous retrouvez ici vos consommations (A), le récapitulatif des coûts (B), la somme à payer (C) ainsi que le détail de votre paiement ou de notre remboursement concernant le solde de votre facture (D). Pour plus de détails, reportez-vous au verso de la facture.",
+		"Savez-vous que vous pouvez effectuer certaines démarches en ligne en toute autonomie 24h / 24 et 7j / 7 ? Souscrire un nouveau contrat, imprimer un justificatif de domicile, souscrire un nouveau service, consulter/imprimer/télécharger vos factures, modifier vos coordonnées bancaires ou votre date de prélèvement... Pour vous connecter à l'Espass personnel ou créer un compte (https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem). Il suffit de vous munir de votre dernière facture et de compléter les données vous concernant. Vous souhaitez en savoir plus sur l'Espass personnel ? Cliquez ici : http://particuliers.es-energies.fr/electricite/services-en-ligne/espass-personnel + économies d'énergies",
+		"(C) Somme à payer : Le montant estimé de votre facture annuelle d’électricité est divisé en 11 mensualités. Suite au relevé réel de votre compteur, nous établissons cette facture décompte correspondant à votre consommation effective de l’année. La différence entre ce que vous avez réellement consommé et ce que vous avez déjà payé détermine le solde restant à payer. Net à payer : le montant indiqué sera prélevé sur votre compte. Si celui-ci est supérieur au montant d'une mensualité, il sera alors prélevé en deux fois selon les modalités indiquées. À noter que ce montant peut être ajouté à la 1ère mensualité de votre nouvel échéancier que vous trouvez au verso de votre facture. Solde en votre faveur : le montant indiqué sera viré sur votre compte bancaire.
+(D) Cela précise si le montant sera prélevé ou remboursé et à quelle date.",
+		"J'ai trop payé. Comment être remboursé ?",
+		"Si votre facture présente un \"solde en votre faveur\", le montant indiqué sera viré sur votre compte bancaire.",
+		"Quand vais-je recevoir ma facture annuelle/décompte ?",
+		"La facture de décompte est envoyée une fois par an, un mois environ après le paiement de la dernière mensualité.",
+		"De quoi se compose le prix de ma facture ?",
+		"Le montant de la facture est composé des consommations et des taxes et contributions (source, http://www.energie-info.fr) + schéma",
+		"Je souhaite modifier le montant des mensualités à venir, comment faire ?",
+		"Pour cela, contactez nous au 03 88 20 60 60 ou par courriel à particuliers@es.fr + espass perso",
+		"Le montant à régler est trop élevé. Puis-je le payer en plusieurs fois ?",
+		"Pour obtenir des informations, contactez nous au 03 88 20 60 60 ou par courriel à particuliers@es.fr",
+		"Pourquoi m'a-t-on prélevé d'un montant supérieur à celui inscrit sur la facture de régularisation ?",
+		"Le montant indiqué sera prélevé sur votre compte. Si celui-ci est supérieur au montant d'une mensualité, il sera alors prélevé en deux fois selon les modalités indiquées. À noter que ce montant peut être ajouté à la 1ère mensualité de votre nouvel échéancier que vous trouvez au verso de votre facture.",
+		"Pourquoi le montant de ma facture va m'être prélevé en 2 fois ?",
+		"Si le montant à prélever est supérieur au montant d'une mensualité, celui-ci est prélevé en 2 fois selon les modalités indiquées.",
+		"Est-ce que le \"solde antérieur\" concerne l'ancien locataire ?",
+		"Non, le solde antérieur est le solde de votre compte avant l'édition de votre facture.",
+		"Dois-je payer le Net à payer ?",
+		"Oui mais étant prélevé, le montant indiqué sera prélevé sur votre compte. Si celui-ci est supérieur au montant d'une mensualité, il sera alors prélevé en deux fois selon les modalités indiquées.",
+		"Que veut dire \"solde en votre faveur\" et pourquoi un \"-\" devant le montant ?",
+		"Cela signifie que le montant indiqué sera viré sur votre compte bancaire. Il s'agit de la somme que l'on vous doit.",
+		"Comment sont calculées les mensualités ?",
+		"Elles sont calculées en fonction de votre consommation de l'année précédente."
 	],
 	[
-		"Qu'est-ce que le solde en faveur ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"Historique de consommation",
+		"Vous retrouvez ici l'historique de vos consommations.",
+		"",
+		""
 	],
 	[
-		"Quelles sont les différence entre facture estimée ou réelle ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+		"Mode de paiement choisi",
+		"Les coordonnées bancaires du compte sur lequel le montant de la facture sera prélevé sont indiquées. Les mensualités de l'année écoulée (A) sont également rappelées.",
+		"",
+		"(A) Toutes les mensualités déjà prélevées sur un an sont récapitulées (date de prélèvement, montant prélevé).",
+		"Mes coordonnées bancaires ont changé ou vont changer, comment faire ?",
+		"Vous pouvez effectuer certaines démarches en ligne en toute autonomie 24h / 24 et 7j / 7, dont la modification de vos coordonnées bancaires. Connectez-vous ou créez un compte Espass personnel (https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem)",
+		"Le montant à régler est trop élevé. Puis-je le payer en plusieurs fois ?",
+		"Pour obtenir des informations, contactez nous au 03 88 20 60 60 ou par courriel à particuliers@es.fr",
+		"Puis-je changer la date de prélèvement ?",
+		"Vous pouvez effectuer certaines démarches en ligne en toute autonomie 24h / 24 et 7j / 7, dont la modification de vos coordonnées bancaires. Connectez-vous ou créez un compte Espass personnel (https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem)",
+		"Je souhaite modifier le montant des mensualités à venir, comment faire ?",
+		"Contactez nous au 03 88 20 60 60 ou par courriel à particuliers@es.fr"
 	],
-	[
-		"Qu'est-ce que la facturation heure de pointe en période non EJP (rattrapage tarifaire) ?",
-		"Réponse a fournir",
-		["elec", "termes"]
+    [
+		"Détail de votre abonnement et des consommations",
+		"Cette rubrique vous indique le montant Total HT (A) de votre abonnement (B), de vos consommations (C) et des services et prestations (D) souscrits pour l'ensemble de la période facturée. Si vous avez changé d'offre pendant la période de facturation, vos consommations et abonnement seront calculés pour chacune des offres.",
+		"",
+		"(A) Total HT : Montant HT de l'abonnement + montant HT des consommations + montant HT des services et prestations le cas échéant
+(B) Le prix de l'abonnement dépend de votre offre, de la puissance souscrite et de votre option tarifaire. Il est calculé au prorata de la période facturée. 
+	- Le prix unitaire €/an : il s'agit du prix de l'abonnement par an
+	- Montant € HT : cela correspond au montant de l'abonnement pour la période facturée
+	=> prix unitaire € / 12 x le nombre de mois facturés
+(C) Les consommations en kWh correspondent à la différence entre les nouveaux index relevés et les anciens. En cas de changement de prix sur la période de facturation, la consommation est répartie au prorata temporis conformément à la réglementation. L'index relevé correspond aux chiffres présents sur votre compteur. Le prix unitaire en €/kWh dépend de l'option tarifaire souscrite.
+	=> Montant € HT des consommations = nombre de kWh consommés x prix unitaire €/kWh
+(D) Le coût des services et prestations auxquels vous avez souscrits sont indiqués.
+	- Le prix unitaire €/mois : il s'agit du prix du service en € par mois
+	- Montant € HT : cela correspond au montant du service pour la période facturée
+	=> prix unitaire € / mois x le nombre de mois facturés",
+		"Pourquoi y a-t-il plusieurs lignes d'abonnement, qu'est-ce que la durée indiquée, et que représente le prix de l'abonnement ?",
+		"Si vous avez changé d'offre ou s'il y a un changement tarifaire pendant la période de facturation, votre abonnement est calculé pour chacune des périodes en fonction du prix. La durée correspond à la période facturée. Pour connaître le prix de l'abonnement, reportez-vous à la ligne abonnement > Montant HT",
+		"Pourquoi y a-t-il plusieurs lignes de consommations ?",
+		"Le montant des consommations est calculé en fonction du prix appliqué pendant la période indiquée sur la facture. Si vous avez changé d'offre ou s'il y a un changement tarifaire pendant la période de facturation, votre consommation est calculé pour chacune des périodes en fonction du prix.",
+		"Je trouve que je consomme trop, comment faire ?",
+		"Pour savoir comment réaliser des économies d'énergies : oriente PSC ou travaux.es.fr ou éco-citoyen."
 	],
-	[
-		"Qu'est-ce que l'historique de consommation ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce que la facture de souscription ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Quelles sont mes heures creuses ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce qu'une donnée relevée en avance pour facture réelle ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce que le rattrapage tarifaire ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Quelles sont les autres taxes et contributions ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Combien me coûte l'abonnement par mois ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce que l'auto-relève ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce que la référence contrat ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Quel est le prix de l'abonnement ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Quels sont les frais de la première mise en service ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Comment sont calculées les parts fixes de l'acheminement ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"D'où vient l'assiette de la CTA sur ma facture ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Comment est calculée l'assiette CTA ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce que le montant H.T. facturé des autres options et services souscrits ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qui décide des taxes ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce que sont toutes ces taxes ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Qu'est-ce que la part d'acheminement ?",
-		"Réponse a fournir",
-		["elec", "termes"]
-	],
-	[
-		"Où trouver le numéro de contrat sur la facture ?",
-		"Réponse a fournir",
-		["elec", "où trouver info"]
-	],
-	[
-		"Où trouver la référence du contrat d'énérgie ?",
-		"Réponse a fournir",
-		["elec", "où trouver info"]
-	],
-	[
-		"Où trouver le point de livraison / PDL ?",
-		"Réponse a fournir",
-		["elec", "où trouver info"]
-	],
-	[
-		"Où trouver les heures pleines et heures creuses de mon contrat ?",
-		"Si vous disposez d'un compteur Heures Pleines / Heures Creuses, vous retrouverez les horaires de chaque plage directement sur votre facture d'électricité. Les plages sont fixées par le Gestionnaire de Réseau de Distribution et ne peuvent pas être modifiées.",
-		["elec", "où trouver info"]
-	],
-	[
-		"Où trouver la visibilté de réduction TPN ?",
-		"Réponse a fournir",
-		["elec", "où trouver info"]
-	],
-	[
-		"Où trouver le numéro de compteur ?",
-		"Réponse a fournir",
-		["elec", "où trouver info"]
-	],
-	[
-		"Où trouver la référence pour payer ?",
-		"Réponse a fournir",
-		["elec", "où trouver info"]
-	],
-	[
-		"Où adresser son chèque ?",
-		"Réponse a fournir",
-		["elec", "où trouver info"]
-	],
-	[
-		"J'ai conclu un contrat en octobre mais j'ai reçu une facture concernant ma consommation du mois en cours plus les mois à venir jusqu'en janvier (par anticipation). Est-ce normal ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "consos"]
-	],
-	[
-		"Je voulais savoir pourquoi j'ai 2 prélèvements prévus un le 2 et l'autre le 7 d'un montant différent ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Je voudrais juste savoir quel est le nouveau montant de prélèvement mensuel ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Je suis étudiant et je paye mon contrat par prévlèvement bancaire, je viens de consulter mon compte et il y a 2 prévlèvement du mois du septembre le 1er de 42,04 euros le 8/9 et le 2eme de 39 euros le 30/09 ? Pourquoi ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"J'avais eu dans ma boite aux lettre un avis d'impayé (car je n'avais pas encore mon nom sur ma boite aux lettre du coup je n'ai pas eu la facture). Avec, j'ai aussi eu une facture de 76euros j'ai donc envoyé le petit coupon avec mon rib, mais je n'ai toujours pas été débitée, est-ce normal ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Je souhaite réduire le montant de mes prélèvements mensuels compte tenu de ma consommation réelle, comment faire ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Comment modifier mon échéancier de mensualisation ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi on viens de me retirer 167 euros sur mon compte alors que mes mensualités sont de 87euros ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi ma facture est plus élevée malgré une diminution de consommation ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "montant", "consos"]
-	],
-	[
-		"J'aimerai savoir pourquoi habituellemenent j'ai des factures de max 60euro et ma derniere facture est de 135 euro ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "montant"]
-	],
-	[
-		" J'ai reçu mon contrat ainsi que ma 1ere facture et j'aimerai savoir les modalités pour mettre en place la mensualisation et comment vous renvoyer mon dossier ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "contrat"]
-	],
-	[
-		"Pourquoi ai-je des factures dont les montants varient du simple au double/triple/quadruple ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "montant"]
-	],
-	[
-		"Je paie un prix fixe mensuel pour l'électricité. Pourrai je le changer ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"J'ai recu une facture datant de 2012/2013, il parait que c'est un rattrapage rétroactif cela me semble bizarre ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"J'ai bien reçu ma facture de décompte annuel, mais pas le prochain échéancier de prélèvement ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"ES me demande paiement d'une facture deux ans après ma dernière livraison d'électricité et mon déménagement, et alors que l'intégralité des factures ont été payées, au motif que les tarifs ont été révisés postérieurement à la hausse. Est-ce possible ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Ne voit pas qu’il faut rajouter la mensualité au dépassement ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi m'a t-on prélevé d’un montant supérieur à celui inscrit sur la facture de régularisation ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Je ne comprend pas le prélèvement du dépassement ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi n’avez vous pas édité à côté de la facture le nouvel échéancier ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi ai-je 13€ de frais de rejet ? Pourquoi mon prélevement a-t-il été arreté ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi malgré le nouveau RIB enregistré, je suis encore prélevé sur l'ancien ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi des frais de mise en service alors que j’ai déjà du courant chez moi ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Pourquoi la consommation est répartie sur plusieurs lignes ? C’est lorsqu’il y a un changement de tarif ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	],
-	[
-		"Est ce que ce sera remboursé / prélevé (alors qu’il est noté \"régularisation sur votre compte à partir du\") ?",
-		"Réponse a fournir",
-		["elec", "vie du contrat", "paiement"]
-	]
+    [
+    	"Taxes et contributions",
+     	"Cette rubrique détaille l'ensemble des taxes et contributions (A) réglementées par l'état pour l'ensemble de la période facturée. Total TTC : total HT + total des taxes et contributions",
+		"",
+		"(A) Taxes : elles sont au nombre de quatre :
+	- La Contribution Tarifaire d’Acheminement (CTA) est collectée par tous les founrisseurs engagés sur les activités de transport et de distribution. Elle est fixée par arrêté ministériel.
+	- La Contribution au Service Public d'électricité (CSPE) permet d'alimenter un compte d'affection spéciale intitulé \"Transition énergétique\" qui sert notamment à financer les politiques de soutien aux énergies renouvelables.Elle est ensuite intégrée, en tant que recette, au budget de l’État.
+	- Les Taxes sur la Consommation Finale d’Electricité (TDCFE et TCCFE) sont définies par chaque commune et chaque département. Elles dépendent de la puissance souscrite et d’un coefficient multiplicateur fixé et voté avant le 1er octobre de chaque année par les conseils municipaux et généraux pour l’année suivante.
+ 	- La Taxe sur la Valeur Ajoutée (TVA) s’applique avec un taux réduit de 5,5% sur l'abonnement HT et la CTA ; elle s’applique avec un taux de 20% sur le prix de l’électricité HT, sur la CSPE et les TCFE. 
+	- La Taxe Convention Assurance (TCA) est perçue sur les montants des prestations d'assistance et d'assurance dans le cadre du service dépannage gaz, reversée à l'assureur partenaire.
+	http://www.energie-info.fr/Fiches-pratiques/Ma-facture-mon-compteur/CSPE-TICGN-CTA-TVA-Toutes-les-taxes-sur-ma-facture + graph répart taxes sur facture",
+		"En quoi consistent les taxes et les contributions ?",
+		"Les taxes et contributions sont fixées par les pouvoirs publics (Etat, communes) et sont perçues par les fournisseurs qui les reversent aux bénéficiaires. Pour en savoir plus : http://www.energie-info.fr/Fiches-pratiques/Ma-facture-mon-compteur/CSPE-TICGN-CTA-TVA-Toutes-les-taxes-sur-ma-facture"
+    ],
+    [
+    	"Informations générales",
+    	"Vous retrouvez ici des informations générales concernant les évolutions tarifaires, réglementaires ainsi que les taxes (A).",
+    	"",
+    	"(B) Taxes : elles sont au nombre de quatre :
+	- La Contribution Tarifaire d’Acheminement (CTA) est collectée par tous les founrisseurs engagés sur les activités de transport et de distribution. Elle est fixée par arrêté ministériel.
+	- La Contribution au Service Public d'électricité (CSPE) permet d'alimenter un compte d'affection spéciale intitulé \"Transition énergétique\" qui sert notamment à financer les politiques de soutien aux énergies renouvelables.Elle est ensuite intégrée, en tant que recette, au budget de l’État.
+ 	- Les Taxes sur la Consommation Finale d’Electricité (TDCFE et TCCFE) sont définies par chaque commune et chaque département. Elles dépendent de la puissance souscrite et d’un coefficient multiplicateur fixé et voté avant le 1er octobre de chaque année par les conseils municipaux et généraux pour l’année suivante.
+	- La Taxe sur la Valeur Ajoutée (TVA) s’applique avec un taux réduit de 5,5% sur l'abonnement HT et la CTA ; elle s’applique avec un taux de 20% sur le prix de l’électricité HT, sur la CSPE et les TCFE. 
+	- La Taxe Convention Assurance (TCA) est perçue sur les montants des prestations d'assistance et d'assurance dans le cadre du service dépannage gaz, reversée à l'assureur partenaire.
+	http://www.energie-info.fr/Fiches-pratiques/Ma-facture-mon-compteur/CSPE-TICGN-CTA-TVA-Toutes-les-taxes-sur-ma-facture + graph répart taxes sur facture",
+		"Comment sont fixés les tarifs réglementés de l'énergie et comment évoluent-ils ?",
+		"Les tarifs réglementés sont contrôlés par les pouvoirs publics. Découvrez notre offre au tarif réglementé en cliquant ici http://particuliers.es-energies.fr/documentation",
+		"Qu'est-ce qu'une offre de marché ?",
+		"Les offres de marché ne sont pas fixés par les pouvoirs publics. Les opérateurs sont libres d'en fixer les termes et tarifs en fonction des conditions du marché. Découvrez nos offres de marchés en cliquant ici.http://particuliers.es-energies.fr/documentation",
+		"Pourquoi je consomme moins et ma facture augmente ?",
+		"Le montant de la facture est composé des consommations et des taxes et contributions. L'augmentation de la facture peut donc s'expliquer par une évolution tarifaire des taxes et contributions."
+    ],
+    [
+    	"Échéancier de paiement",
+    	"Votre prochain échéancier vous indique les dates et les montants de vos prochains prélèvements. Le montant TTC en € est calculé en fonction de l'historique de consommations de l'année passée répartie en 11 mensualités.",
+     	"Savez-vous que vous pouvez personnaliser votre date de prélèvement ? Pour cela, connectez-vous à votre Espass Personnel ou créez un compte (https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem). Il suffit de vous munir de votre dernière facture et de compléter les données vous concernant. Vous souhaitez en savoir plus sur l'Espass personnel ? Cliquez ici : http://particuliers.es-energies.fr/electricite/services-en-ligne/espass-personnel",
+     	"",
+     	"Comment modifier ma date de prélèvement ? Est-il possible de choisir sa date de prélèvement ?",
+     	"Vous pouvez choisir ou modifier gratuitement la date à laquelle seront effectués vos prélèvements. Pour cela, connectez-vous à l'Espass personnel ou créer un compte (https://www.interactive.electricite-strasbourg.net/aelfr/accescybercompte/AuthCybercompteProcess?typeUser=uem)",
+     	"Comment modifier le montant de mes mensualités ?",
+     	"Pour cela, contactez nous au 03 88 20 60 60 ou par courriel à particuliers@es.fr"
+    ]
 ]
