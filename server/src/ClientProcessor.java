@@ -32,17 +32,22 @@ public class ClientProcessor implements Runnable {
                 return ("KO");
             }
             response = new String(b, 0, stream);
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             if (reader.available() > 0) {
                 FileOutputStream f = new FileOutputStream("tmp.jpg");
-                f.write(b);
+                f.write(b, 0, stream);
                 while (reader.available() > 0) {
-                    b = new byte[8192];
-                    stream += reader.read(b);
-                    f.write(b);
+                    int len = reader.read(b);
+                    f.write(b, 0, len);
+                    stream += len;
                     try {
                         Thread.sleep(20);
                     } catch (InterruptedException e) {
-
+                        e.printStackTrace();
                     }
                 }
                 f.flush();
@@ -64,7 +69,7 @@ public class ClientProcessor implements Runnable {
     public void run() {
         boolean closeConnexion = false;
         try {
-            writer = new PrintWriter(sock.getOutputStream());
+            writer = new PrintWriter(new OutputStreamWriter(sock.getOutputStream(), "UTF-8"));
             reader = new BufferedInputStream(sock.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();

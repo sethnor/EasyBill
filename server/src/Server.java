@@ -1,13 +1,13 @@
 import org.json.JSONArray;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
+
+import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.Charset;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
+import java.util.Scanner;
 
 public class Server {
 
@@ -27,9 +27,10 @@ public class Server {
     }
 
     private JSONArray getQuestionFile() {
-        Charset charset = Charset.forName("UTF-8");
         String jsonCode = "";
-        try (BufferedReader reader = Files.newBufferedReader(FileSystems.getDefault().getPath("", "questions.json"), charset)) {
+        try {
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("questions.json"), "UTF-8"));
             String line;
             while ((line = reader.readLine()) != null) {
                 jsonCode += line;

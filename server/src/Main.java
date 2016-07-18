@@ -2,8 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String host = "192.168.2.10";//"10.14.59.180";
-        int port = 9090;
+        String host = "172.17.0.2";//"10.14.60.28";
+        int port = 80;
 
         Server ts = new Server(host, port);
         ts.start();
