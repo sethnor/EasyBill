@@ -80,9 +80,9 @@ public class Processor {
         return (res);
     }
 
-    private List<Point> processOne(int index) {
+    private List<Point> processOne(int page, int index) {
         System.out.println("Recherche du bloc " + index + "...");
-        Mat bloc = Imgcodecs.imread("blocs//bloc" + index + ".jpg", Imgcodecs.CV_LOAD_IMAGE_COLOR);
+        Mat bloc = Imgcodecs.imread("blocs//" + page + "//bloc" + index + ".jpg", Imgcodecs.CV_LOAD_IMAGE_COLOR);
 
         MatOfKeyPoint blocKeyPoints = new MatOfKeyPoint();
         MatOfKeyPoint blocDescriptors = new MatOfKeyPoint();
@@ -128,35 +128,32 @@ public class Processor {
         init();
         List<List<Point>> list = new LinkedList<>();
         List<List<List<Double>>> res = new LinkedList<>();
-
-        for (int i = 1; i <= 13; i++) {
-            list.add(processOne(i));
-        }
-
-        int recto = 0;
-        int verso = 0;
-
-        for (int i = 0; i < list.size(); i++) {
-            if (i < 9 && list.get(i).size() > 0) {
-                recto++;
-            } else if (i >= 9 && list.get(i).size() > 0) {
-                verso++;
+        int finalPage  = 0;
+        for (int page = 1; page <= 4 && finalPage == 0; page++) {
+            List<List<Point>> tmp = new LinkedList<>();
+            int i = 1;
+            int limit = (page % 2 == 1 ? 9 : 4);
+            int ok = 0;
+            while (i <= limit) {
+                tmp.add(processOne(page, i));
+                if (tmp.get(i - 1).size() > 0) {
+                    ok++;
+                }
+                i++;
+            }
+            if (ok > 3) {
+                list = tmp;
+                finalPage = page;
             }
         }
 
-        boolean firstPage = recto > verso;
-        if ((firstPage && recto < 3) || (!firstPage && verso < 3)) {
-            System.out.println("Aucune page.......");
-            return res;
-        }
-
-        System.out.println((firstPage ? "Première" : "Deuxième") + " page !");
+        System.out.println(list.size() > 0 ? "OK page " + finalPage : "KO");
 
 
         Mat img = Imgcodecs.imread(file, Imgcodecs.CV_LOAD_IMAGE_COLOR);
         for (int i = 0; i < list.size(); i++) {
             List<Point> bloc = list.get(i);
-            if (bloc.size() > 0 && ((firstPage && i < 9) || (!firstPage && i >= 9))) {
+            if (bloc.size() > 0) {
                 List<List<Double>> toAdd = new LinkedList<>();
                 List<Double> pt = new LinkedList<>();
                 pt.add(bloc.get(0).x);
@@ -167,10 +164,14 @@ public class Processor {
                 pt.add(bloc.get(2).y);
                 toAdd.add(pt);
                 pt = new LinkedList<>();
+                pt.add((double) (finalPage - 1));
+                toAdd.add(pt);
+                res.add(toAdd);
+                pt = new LinkedList<>();
                 pt.add((double) i);
                 toAdd.add(pt);
                 res.add(toAdd);
-                /*
+            /*
                 Imgproc.line(img, bloc.get(0), bloc.get(1), new Scalar(0, 255, 0), 4);
                 Imgproc.line(img, bloc.get(1), bloc.get(2), new Scalar(0, 255, 0), 4);
                 Imgproc.line(img, bloc.get(2), bloc.get(3), new Scalar(0, 255, 0), 4);
