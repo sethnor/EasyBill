@@ -56,7 +56,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 button.layer.borderColor = UIColor.greenColor().CGColor
                 button.setTitle("", forState: UIControlState.Normal)
                 button.addTarget(self, action: #selector(PhotoViewController.buttonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-                button.tag = Int(i[2][0])
+                button.tag = Int(i[2][0]) * 1000 + Int(i[3][0])
                 self.view.addSubview(button)
             }
         } catch {
@@ -71,7 +71,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     func buttonAction(sender: UIButton!) {
         let button: UIButton = sender
-        questionsMode = button.tag
+        questionsMode = button.tag % 1000
+        questionPage = button.tag / 1000
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("questionsView")
         self.showViewController(vc!, sender: vc)
     }

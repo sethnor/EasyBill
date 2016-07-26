@@ -44,10 +44,12 @@ public class ClientProcessor implements Runnable {
                     int len = reader.read(b);
                     f.write(b, 0, len);
                     stream += len;
-                    try {
-                        Thread.sleep(20);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                    if (reader.available() <= 0) {
+                        try {
+                            Thread.sleep(200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 f.flush();

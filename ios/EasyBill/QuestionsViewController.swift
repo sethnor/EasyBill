@@ -8,7 +8,8 @@
 
 import UIKit
 
-var questionsMode: Int = -1;
+var questionsMode: Int = -1
+var questionPage: Int = -1
 var questionResponse: [String] = [String]()
 
 class QuestionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -22,8 +23,9 @@ class QuestionsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        test.text = (questionsMode == -1 ? "Foire aux questions" : (questionsJson as! [[String]])[questionsMode][0])
-        text.text = (questionsMode == -1 ? "Ci dessous la liste des question aux quelles sont jointes leurs réponses." : (questionsJson as! [[String]])[questionsMode][1])
+        self.title = (questionsMode == -1 ? "Question" : "Bloc")
+        test.text = (questionsMode == -1 ? "Foire aux questions" : (questionsJson as! [[[String]]])[questionPage][questionsMode][0])
+        text.text = (questionsMode == -1 ? "Ci dessous la liste des question aux quelles sont jointes leurs réponses." : (questionsJson as! [[[String]]])[questionPage][questionsMode][1])
         
         getData()
         table.delegate = self
@@ -38,20 +40,26 @@ class QuestionsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func getData() {
-        if ((questionsJson as? [[String]]) == nil) {
+        if ((questionsJson as? [[[String]]]) == nil) {
             return
         }
         var i = 0
-        for bloc in (questionsJson as! [[String]]) {
-            if (i == questionsMode || questionsMode == -1) {
-                var j = 0
-                for str in bloc {
-                    if (j > 3 && j % 2 == 0) {
-                        data.append(str)
-                    } else if (j > 3 && j % 2 == 1) {
-                        response.append(str)
+        for page in (questionsJson as! [[[String]]]) {
+            if (i == questionPage || questionPage == -1) {
+                var ii = 0
+                for bloc in page {
+                    if (ii == questionsMode || questionsMode == -1) {
+                        var j = 0
+                        for str in bloc {
+                            if (j > 3 && j % 2 == 0) {
+                                data.append(str)
+                            } else if (j > 3 && j % 2 == 1) {
+                                response.append(str)
+                            }
+                            j += 1
+                        }
                     }
-                    j += 1
+                    ii += 1
                 }
             }
             i += 1

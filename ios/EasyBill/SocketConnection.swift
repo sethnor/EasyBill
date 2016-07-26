@@ -52,7 +52,7 @@ class SocketConnection: NSObject, NSStreamDelegate {
                 usleep(10000)
             }
         }
-        return (res);
+        return (res)
     }
     
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
@@ -72,7 +72,9 @@ class SocketConnection: NSObject, NSStreamDelegate {
         let data: NSData = UIImageJPEGRepresentation(newImage, 0.5)!
         var len: Int = 0
         while (len < data.length) {
-            len += outputStream!.write(UnsafePointer(data.bytes + len), maxLength: data.length - len)
+            var tmpLen: Int = 0
+            tmpLen = outputStream!.write(UnsafePointer(data.bytes + len), maxLength: data.length - len)
+            len += tmpLen
         }
         
         let res: NSMutableData = NSMutableData()
