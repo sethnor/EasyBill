@@ -14,33 +14,33 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var img: UIImageView!
-    @IBAction func button(sender: UIButton) {
+    @IBAction func button(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
         
         imagePicker.delegate = self
         imagePicker.sourceType =
-            UIImagePickerControllerSourceType.Camera
+            UIImagePickerControllerSourceType.camera
         imagePicker.allowsEditing = false
-        self.presentViewController(imagePicker, animated: true,
+        self.present(imagePicker, animated: true,
                                    completion: nil)
     }
     var image: UIImage = UIImage()
 
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage imageTmp: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage imageTmp: UIImage, editingInfo: [String : AnyObject]?) {
         
-        help.hidden = true
-        spinner.hidden = false
+        help.isHidden = true
+        spinner.isHidden = false
         spinner.startAnimating()
-        photoButton.hidden = true
+        photoButton.isHidden = true
         image = imageTmp
-        self.dismissViewControllerAnimated(true, completion: receiveCoord)
+        self.dismiss(animated: true, completion: receiveCoord)
     }
     
     func receiveCoord()  {
-        var result:AnyObject = conn.sendImg(image)
+        let ret: Data = conn.sendImg(image)
         
         do {
-            result = try NSJSONSerialization.JSONObjectWithData(result as! NSData, options: NSJSONReadingOptions())
+            let result: AnyObject = try JSONSerialization.jsonObject(with: ret, options: JSONSerialization.ReadingOptions()) as AnyObject
             for i in result as! [[[Double]]] {
                 
                 let scale: Double = 800 / Double(image.size.width)
@@ -50,12 +50,12 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 let x2: Double = (i[1][0] / (Double(image.size.width) * scale)) * 300 + 15
                 let y2: Double = (i[1][1] / (Double(image.size.height) * scale)) * 400 + 149
                 
-                let button: UIButton = UIButton(frame: CGRectMake(CGFloat(x1), CGFloat(y1), CGFloat(x2 - x1), CGFloat(y2 - y1)))
-                button.backgroundColor = UIColor.clearColor()
+                let button: UIButton = UIButton(frame: CGRect(x: CGFloat(x1), y: CGFloat(y1), width: CGFloat(x2 - x1), height: CGFloat(y2 - y1)))
+                button.backgroundColor = UIColor.clear
                 button.layer.borderWidth = 1
-                button.layer.borderColor = UIColor.greenColor().CGColor
-                button.setTitle("", forState: UIControlState.Normal)
-                button.addTarget(self, action: #selector(PhotoViewController.buttonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+                button.layer.borderColor = UIColor.green.cgColor
+                button.setTitle("", for: UIControlState())
+                button.addTarget(self, action: #selector(PhotoViewController.buttonAction(_:)), for: UIControlEvents.touchUpInside)
                 button.tag = Int(i[2][0]) * 1000 + Int(i[3][0])
                 self.view.addSubview(button)
             }
@@ -63,24 +63,24 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             print(error)
         }
         
-        spinner.hidden = true
+        spinner.isHidden = true
         img.image = image
-        img.hidden = false
+        img.isHidden = false
 
     }
     
-    func buttonAction(sender: UIButton!) {
+    func buttonAction(_ sender: UIButton!) {
         let button: UIButton = sender
         questionsMode = button.tag % 1000
         questionPage = button.tag / 1000
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("questionsView")
-        self.showViewController(vc!, sender: vc)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "questionsView")
+        self.show(vc!, sender: vc)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        spinner.hidden = true
-        img.hidden = true
+        spinner.isHidden = true
+        img.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {

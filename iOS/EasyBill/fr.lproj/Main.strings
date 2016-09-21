@@ -1,0 +1,48 @@
+
+/* Class = "UIButton"; normalTitle = "Analyser votre facture"; ObjectID = "0CL-Nc-72E"; */
+"0CL-Nc-72E.normalTitle" = "Analyser votre facture";
+
+/* Class = "UILabel"; text = "Titre"; ObjectID = "6CN-8B-YTu"; */
+"6CN-8B-YTu.text" = "Titre";
+
+/* Class = "UIViewController"; title = "EasyBill"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "EasyBill";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "GCd-ep-ipx"; */
+"GCd-ep-ipx.text" = "Title";
+
+/* Class = "UIViewController"; title = "Réponse"; ObjectID = "MiE-Aa-jyf"; */
+"MiE-Aa-jyf.title" = "Réponse";
+
+/* Class = "UITextView"; text = "Question"; ObjectID = "S0A-da-SsV"; */
+"S0A-da-SsV.text" = "Question";
+
+/* Class = "UIViewController"; title = "Questions"; ObjectID = "SN2-8I-MBs"; */
+"SN2-8I-MBs.title" = "Questions";
+
+/* Class = "UIViewController"; title = "Votre facture"; ObjectID = "Th3-0W-wx3"; */
+"Th3-0W-wx3.title" = "Votre facture";
+
+/* Class = "UIButton"; normalTitle = "Foire aux questions"; ObjectID = "drv-2Z-6Sl"; */
+"drv-2Z-6Sl.normalTitle" = "Foire aux questions";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "fnZ-Md-NhS"; */
+"fnZ-Md-NhS.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "EasyBill"; ObjectID = "gVO-0L-50L"; */
+"gVO-0L-50L.title" = "EasyBill";
+
+/* Class = "UITextView"; text = "Afin d'avoir les meilleurs résultats, veuillez prendre en photo votre facture au complet sans déborder, ajuster au maximum la position et la taille de la photo à la facture."; ObjectID = "gmN-dE-A7P"; */
+"gmN-dE-A7P.text" = "Afin d'avoir les meilleurs résultats, veuillez prendre en photo votre facture au complet sans déborder, ajuster au maximum la position et la taille de la photo à la facture.";
+
+/* Class = "UIButton"; normalTitle = "Prendre la photo"; ObjectID = "hHe-g3-FTv"; */
+"hHe-g3-FTv.normalTitle" = "Prendre la photo";
+
+/* Class = "UITextView"; text = "Comprenez votre facture d'électricité ou de gaz plus facilement !"; ObjectID = "nzb-Gt-b1Y"; */
+"nzb-Gt-b1Y.text" = "Comprenez votre facture d'électricité ou de gaz plus facilement !";
+
+/* Class = "UIBarButtonItem"; title = "Retour"; ObjectID = "sVR-Bj-Ubr"; */
+"sVR-Bj-Ubr.title" = "Retour";
+
+/* Class = "UITextView"; text = "Réponse"; ObjectID = "zOU-rk-6Mm"; */
+"zOU-rk-6Mm.text" = "Réponse";

@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String host = "172.17.0.2";//"10.14.60.28";
+        String host = "192.168.43.32";//"10.14.60.28";
         int port = 80;
 
         Server ts = new Server(host, port);

@@ -8,18 +8,18 @@
 
 import UIKit
 
-class SocketConnection: NSObject, NSStreamDelegate {
+class SocketConnection: NSObject, StreamDelegate {
     var host:String?
     var port:Int?
-    var inputStream: NSInputStream?
-    var outputStream: NSOutputStream?
+    var inputStream: InputStream?
+    var outputStream: OutputStream?
     
-    func connect(host: String, port: Int) {
+    func connect(_ host: String, port: Int) {
         
         self.host = host
         self.port = port
         
-        NSStream.getStreamsToHostWithName(host, port: port, inputStream: &inputStream, outputStream: &outputStream)
+        Stream.getStreamsToHost(withName: host, port: port, inputStream: &inputStream, outputStream: &outputStream)
         
         if (inputStream != nil && outputStream != nil) {
 
@@ -37,69 +37,70 @@ class SocketConnection: NSObject, NSStreamDelegate {
     func getQuestions() -> NSMutableData {
         
         let string = "UPDATE_0"
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-        outputStream!.write(UnsafePointer(data.bytes), maxLength: data.length)
+        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+        outputStream!.write((data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count), maxLength: data.count)
    
         let res: NSMutableData = NSMutableData()
         while (inputStream!.hasBytesAvailable == false) {
             usleep(10000)
         }
         while (inputStream!.hasBytesAvailable){
-            var buffer = [UInt8](count: 4096, repeatedValue: 0)
+            var buffer = [UInt8](repeating: 0, count: 4096)
             let len = inputStream!.read(&buffer, maxLength: buffer.count)
             if(len > 0){
-                res.appendData(NSData(bytes: buffer as [UInt8], length: len))
+                res.append(Data(bytes: UnsafePointer<UInt8>(buffer as [UInt8]), count: len))
                 usleep(10000)
             }
         }
         return (res)
     }
     
-    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+    func resizeImage(_ image: UIImage, newWidth: CGFloat) -> UIImage {
         
         let scale = newWidth / image.size.width
         let newHeight = image.size.height * scale
-        UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
-        image.drawInRect(CGRectMake(0, 0, newWidth, newHeight))
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
     
-    func sendImg(image: UIImage) -> NSData {
+    func sendImg(_ image: UIImage) -> Data {
         let newImage = resizeImage(image, newWidth: 800)
-        let data: NSData = UIImageJPEGRepresentation(newImage, 0.5)!
+        let data: Data = UIImageJPEGRepresentation(newImage, 0.5)!
         var len: Int = 0
-        while (len < data.length) {
+        
+        while (len < data.count) {
             var tmpLen: Int = 0
-            tmpLen = outputStream!.write(UnsafePointer(data.bytes + len), maxLength: data.length - len)
+            tmpLen = outputStream!.write(((data as NSData).bytes).advanced(by: len).assumingMemoryBound(to: UInt8.self), maxLength: data.count - len)
             len += tmpLen
         }
-        
+        print("ok")
         let res: NSMutableData = NSMutableData()
         while (inputStream!.hasBytesAvailable == false) {
             usleep(10000)
         }
         while (inputStream!.hasBytesAvailable){
-            var buffer = [UInt8](count: 4096, repeatedValue: 0)
+            var buffer = [UInt8](repeating: 0, count: 4096)
             let len = inputStream!.read(&buffer, maxLength: buffer.count)
             if(len > 0){
-                res.appendData(NSData(bytes: buffer as [UInt8], length: len))
+                res.append(Data(bytes: UnsafePointer<UInt8>(buffer as [UInt8]), count: len))
                 usleep(10000)
             }
         }
-        return (res)
+        return (res) as Data
     }
     
-    func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
+    func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
         if aStream === inputStream {
             switch eventCode {
-            case NSStreamEvent.ErrorOccurred:
-                print("input: ErrorOccurred: \(aStream.streamError?.description)")
-            case NSStreamEvent.OpenCompleted:
+            case Stream.Event.errorOccurred:
+                print("input: ErrorOccurred")
+            case Stream.Event.openCompleted:
                 print("input: OpenCompleted")
-            case NSStreamEvent.HasBytesAvailable:
+            case Stream.Event.hasBytesAvailable:
                 print("input: HasBytesAvailable")
                 
                 // Here you can `read()` from `inputStream`
@@ -110,11 +111,11 @@ class SocketConnection: NSObject, NSStreamDelegate {
         }
         else if aStream === outputStream {
             switch eventCode {
-            case NSStreamEvent.ErrorOccurred:
-                print("output: ErrorOccurred: \(aStream.streamError?.description)")
-            case NSStreamEvent.OpenCompleted:
+            case Stream.Event.errorOccurred:
+                print("output: ErrorOccurred")
+            case Stream.Event.openCompleted:
                 print("output: OpenCompleted")
-            case NSStreamEvent.HasSpaceAvailable:
+            case Stream.Event.hasSpaceAvailable:
                 print("output: HasSpaceAvailable")
                 
                 // Here you can write() to `outputStream`

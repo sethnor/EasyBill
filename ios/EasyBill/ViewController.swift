@@ -8,7 +8,7 @@
 
 import UIKit
 
-var questionsJson: AnyObject = NSData()
+var questionsJson: AnyObject = Data() as AnyObject
 let conn = SocketConnection()
 
 class ViewController: UIViewController {
@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoButton.hidden = true
-        questionButton.hidden = true
+        photoButton.isHidden = true
+        questionButton.isHidden = true
         spinner.startAnimating()
     }
 
@@ -30,27 +30,27 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         questionsMode = -1
         questionPage = -1
         if (firstLoad == true) {
             firstLoad = false
             
-            //conn.connect("192.168.2.10", port: 80)
+            conn.connect("192.168.43.32", port: 80)
             //conn.connect("10.14.0.6", port: 2080)
             
-            conn.connect("esybill.strasbourg.epitech.eu", port: 1337)
+            //conn.connect("esybill.strasbourg.epitech.eu", port: 1337)
             //conn.connect("10.14.60.28", port: 80)
             do {
-                questionsJson = try NSJSONSerialization.JSONObjectWithData(conn.getQuestions(), options: NSJSONReadingOptions())
+                questionsJson = try JSONSerialization.jsonObject(with: conn.getQuestions() as Data, options: JSONSerialization.ReadingOptions()) as AnyObject
             } catch {
                 print(error)
             }
             
             self.spinner.stopAnimating()
-            self.photoButton.hidden = false
-            self.questionButton.hidden = false
-            self.spinner.hidden = true
+            self.photoButton.isHidden = false
+            self.questionButton.isHidden = false
+            self.spinner.isHidden = true
         }
     }
 }

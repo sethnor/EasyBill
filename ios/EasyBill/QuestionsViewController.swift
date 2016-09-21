@@ -70,21 +70,21 @@ class QuestionsViewController: UIViewController, UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellSample", forIndexPath: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellSample", for: indexPath)
+        cell.textLabel?.text = data[(indexPath as NSIndexPath).row]
         return cell
     }
    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         questionResponse.removeAll()
-        questionResponse.append(data[indexPath.row])
-        questionResponse.append(response[indexPath.row])
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("responseView")
-        self.showViewController(vc!, sender: vc)
+        questionResponse.append(data[(indexPath as NSIndexPath).row])
+        questionResponse.append(response[(indexPath as NSIndexPath).row])
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "responseView")
+        self.show(vc!, sender: vc)
     }
 }

@@ -15,10 +15,10 @@ class ResponseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         question.text = questionResponse[0]
-        question.font = .systemFontOfSize(19)
+        question.font = .systemFont(ofSize: 19)
         question.textAlignment = NSTextAlignment(rawValue: 1)!
         response.text = questionResponse[1]
-        response.font = .systemFontOfSize(18)
+        response.font = .systemFont(ofSize: 18)
     }
 
     override func didReceiveMemoryWarning() {
